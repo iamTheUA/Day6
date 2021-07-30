@@ -10,9 +10,8 @@ public class VendingMachine {
 		int[] mach = { 1, 2, 5, 10, 50, 100, 500, 1000 };
 		System.out.print("Enter The Amount: ");
 		Scanner sc = new Scanner(System.in);
-		int t = sc.nextInt();
+		int amt = sc.nextInt();
 		sc.close();
-		int amt = t;
 		while (amt > 0) {
 			note = 0;
 			while (amt >= mach[i]) {
@@ -20,8 +19,8 @@ public class VendingMachine {
 				note++;
 			}
 			if (note > 0) {
-				System.out.printf("%-3dx  Rs %d",note, mach[i]);
-				System.out.println("");
+				System.out.printf("%-3dx  Rs %d", note, mach[i]);
+				System.out.println(" ");
 			}
 			i--;
 		}
