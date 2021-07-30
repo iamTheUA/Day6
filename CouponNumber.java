@@ -12,7 +12,8 @@ public class CouponNumber {
 		sc.close();
 	}
 
-	public static int coupon(int num) {
+	public static void coupon(int num) {
+		boolean c = true;
 		if (num <= 999 && num >= 100) {
 			Random random = new Random();
 			for (int i = 0; i <= 1000; i++) {
@@ -20,12 +21,16 @@ public class CouponNumber {
 				System.out.println(randomNum);
 				if (randomNum == num) {
 					System.out.println("You Won!");
+					c = false;
 					break;
 				}
 			}
+
 		} else {
 			System.out.println("Invalid Coupon Number");
 		}
-		return num;
+		if (c) {
+			System.out.println("You lose!");
+		}
 	}
 }
